@@ -16,3 +16,7 @@ User Stories
 4. As a user, I would like for finisihing tasks to *feel* good and I think that a nice animation on task completion would really deliver that dopamine hit I'm looking for.
 
 5. As a user, I would like to see a history of all my accomplished and unaccomplished goals. Seeing a history could be useful if I am changing my goals frequently and would like to see what I was doing at a different time.
+
+## Resources
+
+Checkmark Logo: https://www.flaticon.com/free-icons/correct
