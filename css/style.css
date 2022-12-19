@@ -1,14 +1,24 @@
 header {
-  background-color: green;
   width: 100%;
+}
+
+body {
+  font-family: 'Baloo 2', sans-serif;
 }
 
 .nav-flex-container {
   display: flex;
   flex-direction: row;
-  height: 100px;
+  height: 150px;
   padding: 20px;
   align-items: left;
+}
+
+#text-logo {
+  font-family: 'Baloo 2', sans-serif;
+  color: black;
+  font-size: large;
+  font-weight: 400;
 }
 
 .nav-flex-container ul {
