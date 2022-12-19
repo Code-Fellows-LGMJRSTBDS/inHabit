@@ -1,4 +1,4 @@
-# inHabit-team inHabit team project repoCode201d93
+# inHabit-team inHabit team project repo Code201d93
 
 inHabit is a daily habit tracker/checklist app
 Being a modern day human with many esposibilities it is hard to keep mental track of everything that needs to be done day in and day out both professionally and at a personal level. That is why we created inHatbit! 
