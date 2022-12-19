@@ -12,6 +12,8 @@ inHabit is an easy to use daily habit tracker/checklist app that allows you to w
 
 - Link for Github: https://github.com/inHabit-tracker/inHabit.
 
+-Link to figma files: https://www.figma.com/files/project/76496499/Team-project?fuid=1175891756550856246
+
 - Checkmark Logo: https://www.flaticon.com/free-icons/correct.
 
 - Developing a habit research: https://jamesclear.com/new-habit#:~:text=On%20average%2C%20it%20takes%20more,to%20form%20a%20new%20habit.
@@ -27,12 +29,18 @@ inHabit is an easy to use daily habit tracker/checklist app that allows you to w
 
 1. As a user, I would like to track whether or not I am finishing all of my daily tasks. Seeing these tasks displayed in a simple visual layout and being able to mark them as finished would me organize and achieve my goals.
 
-2. As a user, I would like to see a visual representation of my Habits. This would be even better if I could choose to view my progress over a weekly or monthly timeframe. Seeing a visual representation will help me identify trends in my performance.
+2. As a user, I would like to see a visual representation of my Habits. This would be even better if I could choose to view my progress over a weekly timeframe. Seeing a visual representation will help me identify trends in my performance.
 
 3. As a user, I would like to see a leaderboard and public Habits of other users. This competitive element will help hold me accountable and add a fun social aspect.
 
-4. As a user, I would like for finisihing tasks to *feel* good and I think that a nice animation on task completion would really deliver that dopamine hit I'm looking for.
+4. As a user, I would like to see a history of all my accomplished and unaccomplished goals. Seeing a history could be useful if I am changing my goals frequently and would like to see what I was doing at a different time.
 
-5. As a user, I would like to see a history of all my accomplished and unaccomplished goals. Seeing a history could be useful if I am changing my goals frequently and would like to see what I was doing at a different time.
+5. As a user, I would like to have a menu/task bar that is out of the way and only displays when I want to use it then it returns to being hiden.
 
-6. As a user, I would like to have a menu/task bar that is out of the way and only displays when I want to use it then it returns to being hiden.
+### Stretch goals:
+
+1. As a user, I would like to have little strain on my eyes and have a dark background for a more comprehensive view at night or in places with low visibility. Having the option of Dark Mode on the app would help accomplish that
+
+2. As a user, I would like to see a visual representation of my Habits. Since I already have a weekly report a monthly report that summarizes my accomplishments would do that. Seeing a visual representation will help me identify trends in my performance.
+
+3. As a user, I would like for finisihing tasks to *feel* good and I think that a nice animation on task completion would really deliver that dopamine hit I'm looking for.
