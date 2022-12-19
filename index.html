@@ -1,14 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&display=swap" rel="stylesheet">
   <title>inHabit Tracker</title>
+
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <h1>OUR HOMEPAGE</h1>
+  <header>
+    <nav class="nav-flex-container">
+      <div id="image-logo"><img src="/" alt=""></div>
+      <div id="text-logo">
+        <h1>inHabit</h1>
+      </div>
+      <ul>
+        <li> <a href="index.html">My Habits</a> </li>
+        <li> <a href="stats.html">My Stats</a> </li>
+        <li> <a href="about.html">About inHabit</a> </li>
+      </ul>
+    </nav>
+  </header>
+
+</head>
+
+<body>
+  <header>inHabit</header>
+  <section class="pillbox-container">
+    <div id="add-day-pillbox"><p>+</p></div>
+    <div id="sunday-pillbox"><p>S</p></div>
+    <div id="monday-pillbox" class="dark"><p>M</p></div>
+    <div id="tueday-pillbox"><p>T</p></div>
+    <div id="wednesday-pillbox"><p>W</p></div>
+    <div id="thurday-pillbox"><p>T</p></div>
+    <div id="friday-pillbox"><p>F</p></div>
+    <div id="saturday-pillbox"><p>S</p></div>
+    <div id="finished-day-pillbox"><p>V</p></div>
+  </section>
+  <section class="day-container">
+    <div id="settings-card" class="hide">
+      <h3>new Habit form</h3>
+    </div>
+    <div id="sunday-card" class="hide">
+      <h3>Sunday</h3>
+      <form class="day-form">
+      <ul class="habit-list">
+        <li><input type="text" name="sunday-input" class="day-input" placeholder="Enter new Habit"></li>
+      </ul>
+      </form>
+    </div>
+    <div id="monday-card" class="">
+      <h3>Monday</h3>
+      <form class="day-form">
+        <ul class="habit-list">
+          <li><input type="text" name="monday-input" class="day-input" placeholder="Enter new Habit"></li>
+        </ul>
+      </form>
+    </div>
+    <div id="tuesday-card" class="hide">
+      <h3>Tuesday</h3>
+      <form class="day-form">
+        <ul class="habit-list">
+          <li><input type="text" name="tuseday-input" class="day-input" placeholder="Enter new Habit"></li>
+        </ul>
+    </form>
+    </div>
+    <div id="wednesday-card" class="hide">
+      <h3>Wednesday</h3>
+      <form class="day-form">
+        <ul class="habit-list">
+          <li><input type="text" name="wednesday-input" class="day-input" placeholder="Enter new Habit"></li>
+        </ul>
+    </form>
+    </div>
+    <div id="thursday-card" class="hide">
+      <h3>Thursday</h3>
+      <form class="day-form">
+        <ul class="habit-list">
+          <li><input type="text" name="thursday-input" class="day-input" placeholder="Enter new Habit"></li>
+        </ul>
+    </form>
+    </div>
+    <div id="friday-card" class="hide">
+      <h3>Friday</h3>
+      <form class="day-form">
+        <ul class="habit-list">
+          <li><input type="text" name="friday-input" class="day-input" placeholder="Enter new Habit"></li>
+        </ul>
+    </form>
+    </div>
+    <div id="saturday-card" class="hide">
+      <h3>Saturday</h3>
+      <form class="day-form">
+        <ul class="habit-list">
+          <li><input type="text" name="saturday-input" class="day-input" placeholder="Enter new Habit"></li>
+        </ul>
+    </form>
+    </div>
+    <div id="finished-card" class="hide">
+      <h3>Finished</h3>
+    </div>
+  </section>
+<script src="js/home.js"></script>
+
 </body>
+
 </html>
