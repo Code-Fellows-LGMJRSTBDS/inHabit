@@ -12,16 +12,22 @@ There are things that we know we should do everyday, and habits we know would he
 + User can add tasks
 + User can include a category label for the task, choosing from a preset list of categories, or adding their own unique category
 + User can include a goal of how many times per week this task should be completed
-+ User can view a chart of their performance historically - by day, weekly, or monthly
++ User can view a chart of their performance historically - by day, or weekly
 + User can interact with the application on their destop or mobile
++ User can change some settings with a slide-out menu
 
 
 **Project Does Not Do:**
 
 + User cannot see other user's tasks, goals, or habits
 + User cannot track with full calendar integration
-+ User cannot 
 
 ## Project MVP
 
-The minimum requirements for a working product are that we have created a website application for a user to visit and track their saved tasks and the performance of their habits over time.
+The minimum requirements for a working product are that we have created a website application for a user to visit, track their saved tasks and the performance of their habits over the week.
+
+## Stretch Goals
+
++ User can opt-in to cookies tracking
++ User can view their performance over the month -  monthly chart
++ User can view in "dark mode"
