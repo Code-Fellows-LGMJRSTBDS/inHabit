@@ -12,7 +12,7 @@ inHabit is an easy to use daily habit tracker/checklist app that allows you to w
 
 - Link for Github: https://github.com/inHabit-tracker/inHabit.
 
--Link to figma files: https://www.figma.com/files/project/76496499/Team-project?fuid=1175891756550856246
+- Link to figma files: https://www.figma.com/files/project/76496499/Team-project?fuid=1175891756550856246
 
 - Checkmark Logo: https://www.flaticon.com/free-icons/correct.
 
