@@ -8,6 +8,7 @@ main {
 
 body {
     background-color: #444444;
+    font-family: 'baloo 2';
 }
 
 .card {
@@ -17,8 +18,54 @@ body {
     padding: 0.75em;
     border-radius: 20px;
     box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.75);
-    background-color: hsl(152, 95%, 41%);
+    background-color: hsl(152, 95%, 41%, 70%);
     color: white;
+}
+
+.card p {
+    line-height: 1;
+    padding: 0.5em;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-size-adjust:inherit;
+}
+
+header {
+    background-color:hsl(152, 95%, 41%, 70%);
+    width: 100%;
+    font-family: 'baloo 2';
+    color: white;
+}
+
+.nav-flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    padding: 20px;
+    align-items: left;
+}
+
+.nav-flex-container ul {
+    margin-left: auto;
+    flex-direction: row;
+}
+
+.nav-flex-container li {
+    margin-bottom: 10px;
+}
+
+#image-logo {
+    width: 100px;
+}
+
+@media (max-width: 800px) {
+    .nav-flex-container {
+        flex-direction: column;
+        background-color: white;
+    }
 }
 
 #confettis {
