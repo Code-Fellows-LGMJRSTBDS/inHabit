@@ -21,6 +21,10 @@ body {
   font-weight: 400;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 .nav-flex-container ul {
   margin-left: auto;
   flex-direction: row;
@@ -38,6 +42,9 @@ body {
   .nav-flex-container {
     flex-direction: column;
     background-color: white;
+  }
+  .nav-items-right {
+    display: none;
   }
 }
 
