@@ -1,10 +1,11 @@
-:root{
+:root {
   --clr-grey: #ADADAD;
   --clr-dark: #00d22e47;
   --clr-main: #00e078;
-  --clr-secondary:   #00ad5f;
+  --clr-secondary: #00ad5f;
 }
-body{
+
+body {
   background-color: #555;
   font-family: 'Baloo 2';
 }
@@ -32,7 +33,7 @@ div[id*="pillbox"] {
 }
 
 div[id*="pillbox"]:hover {
- transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 p {
@@ -59,15 +60,18 @@ p {
 div[id*="card"] {
   min-height: 500px;
   width: 425px;
-  border: 3px var(--clr-main) solid;
+  border: solid 4px var(--clr-main);
+  border-radius: 30px;
   text-align: center;
   font-size: 1.5rem;
   color: white;
 }
 
-div>h3 {margin: 5px 0 0 0;}
+div>h3 {
+  margin: 5px 0 0 0;
+}
 
-.hide{
+.hide {
   display: none;
   transition: .5s;
 }
@@ -87,18 +91,56 @@ img {
   border-radius: 50%;
 }
 
-
-@media (max-width: 850px) {
-  .pillbox-container {flex-wrap: wrap;}
-  div[id*="day-pillbox"] {width: 50px; height: 50px;}
-  p {font-size: 1.2rem;}
-  .day-container {flex-direction: column;}
-  div[id*="card"] {width: 90%; margin: 0 auto;}
-
+form {
+  margin-top: 15px;
 }
 
 ul {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+}
+
+
+input {
+  font-family: 'Baloo 2';
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  margin: 15px;
+}
+
+form li:hover {
+  color: var(--clr-main);
+}
+
+
+
+
+
+
+
+@media (max-width: 850px) {
+  .pillbox-container {
+    flex-wrap: wrap;
+  }
+
+  div[id*="day-pillbox"] {
+    width: 50px;
+    height: 50px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .day-container {
+    flex-direction: column;
+  }
+
+  div[id*="card"] {
+    width: 90%;
+    margin: 0 auto;
+  }
+
 }
