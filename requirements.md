@@ -31,3 +31,5 @@ The minimum requirements for a working product are that we have created a websit
 + User can opt-in to cookies tracking
 + User can view their performance over the month -  monthly chart
 + User can view in "dark mode"
++ Adding goals for the amount of times a task should be completed each week, or month
++ Adding animations such as confetti on task or goal completion
