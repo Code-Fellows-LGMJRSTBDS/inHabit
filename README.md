@@ -4,7 +4,7 @@ inHabit is a daily habit tracker/checklist app
 Being a modern day human with many esposibilities it is hard to keep mental track of everything that needs to be done day in and day out both professionally and at a personal level. That is why we created inHatbit! 
 inHabit is an easy to use daily habit tracker/checklist app that allows you to write down what needs to be done and allows you to organize your to-do list by category. Research shows that it takes humans anywhere from 18 days to 254 days to develop a habit, so why not give yourself the edge over everyone else and start tracking what needs to be done and become the person you're destined to be. Use inHabit today!
 
-* * Using inHabit may or may not save a chinchilla somewhere in the world.
+*Using inHabit may or may not save a chinchilla somewhere in the world.*
 
 ## Authors: Tyler Bennett, Melanie Johnston, Liam Grist, Rafael Aldana, David Sitthideth
 
