@@ -1,16 +1,12 @@
 'use strict';
 
 const pillbox = document.querySelectorAll('div[id*="day-pillbox"]');
-console.log(pillbox) ;
 const cards = document.querySelectorAll('div[id*="card"]');
-console.log(cards);
 const dayInputs = document.querySelectorAll('.day-input');
-console.log(dayInputs);
 const habitLists = document.querySelectorAll('.habit-list');
-console.log(habitLists);
 const dayForms = document.querySelectorAll('.day-form');
-console.log(dayForms);
 const finishedList = document.querySelector('#finished-list');
+let oldHabits = JSON.parse(localStorage.getItem('Day'));
 const finishedHabits = [];
 const allDays = [];
 
@@ -24,7 +20,6 @@ for (let i = 0; i < dayForms.length; i++) {
     allDays[i].habitsAdded++;
     // Stringify Data for local storage
     let stringifiedDay = JSON.stringify(allDays);
-    console.log('Stringified Day', stringifiedDay);
     // Set to Local Storage
     localStorage.setItem('Day', stringifiedDay);
     habitLists[i].appendChild(tempElement);
@@ -33,7 +28,6 @@ for (let i = 0; i < dayForms.length; i++) {
       allDays[i].habitsFinished++;
       // Stringify Data for local storage
       let stringifiedDay = JSON.stringify(allDays);
-      console.log('Stringified Day', stringifiedDay);
       // Set to Local Storage
       localStorage.setItem('Day', stringifiedDay);
       let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
@@ -51,9 +45,6 @@ for (let i = 0; i < pillbox.length; i++) {
     pillbox[i].classList.toggle('dark');
   });
 }
-
-
-let TOD = new Date();
 
 function Day(dayName, dayNumber) {
   this.dayName = dayName;
@@ -76,22 +67,25 @@ const wednesday = new Day('Wednesday', 3);
 const thursday = new Day('Thursday', 4);
 const friday = new Day('Friday', 5);
 const saturday = new Day('Saturday', 6);
-
+if (oldHabits) {
+  for (let i = 0; i < allDays.length; i++) {
+    allDays[i].habits = oldHabits[i].habits;
+    allDays[i].habitsAdded = oldHabits[i].habitsAdded;
+    allDays[i].habitsFinished = oldHabits[i].habitsFinished;
+  }
+}
 
 
 // Pull Data from Local Storage
 let retrievedDay = localStorage.getItem('Day');
 
-console.log('retrieved day >>>', retrievedDay);
 
 // Parse our Local Storage Data
 // let parsedDay = JSON.parse(retrievedDay);
 let parsedDay = JSON.parse(retrievedDay);
 
-console.log('parsed days >>>', parsedDay);
 
 
-let oldHabits = JSON.parse(localStorage.getItem('Day'));
 if (oldHabits) {
   for (let i = 0; i < oldHabits.length; i++) {
     if (oldHabits[i].habits) {
@@ -103,7 +97,6 @@ if (oldHabits) {
           allDays[i].habitsFinished++;
           // Stringify Data for local storage
           let stringifiedDay = JSON.stringify(allDays);
-          console.log('Stringified Day', stringifiedDay);
           // Set to Local Storage
           localStorage.setItem('Day', stringifiedDay);
           let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
