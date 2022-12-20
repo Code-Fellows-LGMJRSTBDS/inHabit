@@ -1,0 +1,36 @@
+header {
+  background-color: green;
+  width: 100%;
+}
+
+.nav-flex-container {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  padding: 20px;
+  align-items: left;
+}
+
+.nav-flex-container ul {
+  margin-left: auto;
+  flex-direction: row;
+}
+
+.nav-flex-container li {
+  margin-bottom: 10px;
+}
+
+#image-logo {
+  width: 100px;
+}
+
+@media (max-width: 800px) {
+  .nav-flex-container {
+    flex-direction: column;
+    background-color: white;
+  }
+}
+
+
+
+
