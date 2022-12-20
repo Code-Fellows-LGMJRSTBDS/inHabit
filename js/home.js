@@ -23,9 +23,19 @@ for (let i = 0; i < dayForms.length; i++) {
     tempElement.innerText = dayInputs[i].value;
     allDays[i].habits.push(dayInputs[i].value);
     allDays[i].habitsAdded++;
+    // Stringify Data for local storage
+    let stringifiedDay = JSON.stringify(allDays);
+    console.log('Stringified Day', stringifiedDay);
+    // Set to Local Storage
+    localStorage.setItem('Day', stringifiedDay);
     habitLists[i].appendChild(tempElement);
     tempElement.addEventListener('click', () => {
       allDays[i].habitsFinished++;
+      // Stringify Data for local storage
+      let stringifiedDay = JSON.stringify(allDays);
+      console.log('Stringified Day', stringifiedDay);
+      // Set to Local Storage
+      localStorage.setItem('Day', stringifiedDay);
       let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
       allDays[i].habits.splice(tempIndex, 1);
       finishedHabits.push(tempElement);
@@ -68,13 +78,7 @@ const thursday = new Day('Thursday', 4);
 const friday = new Day('Friday', 5);
 const saturday = new Day('Saturday', 6);
 
-// Stringify Data for local storage
-let stringifiedDay = JSON.stringify(allDays);
 
-console.log('Stringified Day', stringifiedDay);
-
-// Set to Local Storage
-localStorage.setItem('Day', stringifiedDay);
 
 // Pull Data from Local Storage
 let retrievedDay = localStorage.getItem('Day');
