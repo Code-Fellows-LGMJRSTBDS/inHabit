@@ -1,6 +1,5 @@
 'use strict';
 
-
 const pillbox = document.querySelectorAll('div[id*="day-pillbox"]');
 console.log(pillbox) ;
 const cards = document.querySelectorAll('div[id*="card"]');
@@ -53,7 +52,6 @@ for (let i = 0; i < pillbox.length; i++) {
 }
 
 
-
 let TOD = new Date();
 
 function Day(dayName, dayNumber) {
@@ -87,7 +85,22 @@ console.log('retrieved day >>>', retrievedDay);
 
 // Parse our Local Storage Data
 // let parsedDay = JSON.parse(retrievedDay);
-let parsedDay = JSON.parse(retrievedDay)
+let parsedDay = JSON.parse(retrievedDay);
 
 console.log('parsed days >>>', parsedDay);
 
+
+
+
+let oldHabits = JSON.parse(localStorage.getItem('Day'));
+if (oldHabits) {
+  for (let i = 0; i < oldHabits.length; i++) {
+    if (oldHabits[i].habits) {
+      for (let j = 0; j < oldHabits[i].habits.length; j++) {
+        let tempElement = document.createElement('li');
+        tempElement.innerText = oldHabits[i].habits[j];
+        allDays[i].list.appendChild(tempElement);
+      }
+    }
+  }
+}
