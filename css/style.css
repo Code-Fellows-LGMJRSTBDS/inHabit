@@ -12,6 +12,13 @@ body {
   height: 150px;
   padding: 20px;
   align-items: left;
+  background-color: white;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  
 }
 
 #text-logo {
@@ -19,9 +26,10 @@ body {
   color: black;
   font-size: large;
   font-weight: 400;
+  padding-left: 20px;
 }
 
-.nav-toggle {
+.nav-items-toggle {
   display: none;
 }
 
@@ -29,10 +37,14 @@ body {
   display: flex;
   margin-left: auto;
   flex-direction: row;
+  font-size: large;
+  align-items: center;
+  justify-content: space-between;
+  
 }
 
 nav li {
-  padding-right: 8px;
+  padding-right: 10px;
 }
 
 #image-logo {
@@ -40,16 +52,16 @@ nav li {
 }
 
 @media (max-width: 800px) {
-  .nav-flex-container, #nav-items {
+  .nav-flex-container, .nav-items {
     flex-direction: column;
   }
-  #nav-items {
+  .nav-items {
     display: none;
   }
   .nav-toggle-show {
     display: flex;
   }
-  .nav-toggle {
+  .nav-items-toggle {
     align-self: flex-end;
     display: initial;
     position: absolute;
