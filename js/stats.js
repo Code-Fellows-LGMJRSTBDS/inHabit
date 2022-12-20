@@ -6,14 +6,14 @@
 
 let canvasElem = document.getElementById('Chart');
 
-// ********************* HELPER FUNCTIONS / UTILITIES / METHODS *********************
+// ********************* HELPER FUNCTIONS / UTILITIES / METHODS ****************
 
 
 // ********************* THIS FUNCTION RENDERS THE CHART ***********************
 
 let parseData = JSON.parse(localStorage.getItem('Day'));
 
-
+// ********************* THIS FUNCTION RENDERS THE CHART ************************
 function renderChart() {
   let dayName = []
   let habitsAdded = []
@@ -26,7 +26,7 @@ function renderChart() {
   });
 
   console.log(dayName);
-
+// ******************* THIS IS THE ACTUAL CHART ****************************
   let chartObj = {
     scaleFontColor: "white",
     type: 'line',
@@ -62,7 +62,6 @@ function renderChart() {
   }
   new Chart(canvasElem, chartObj)
 };
-
 
 // ********************* EVENT HANDLERS **********************
 
