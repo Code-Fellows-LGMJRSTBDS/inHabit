@@ -1,6 +1,6 @@
 :root {
   --clr-grey: #ADADAD;
-  --clr-dark: #00d22e47;
+  --clr-dark: #00ab5e;
   --clr-main: #00e078;
   --clr-secondary: #00ad5f;
 }
@@ -25,7 +25,7 @@ body {
 div[id*="pillbox"] {
   width: 100px;
   height: 100px;
-  background-color: var(--clr-main);
+  background-color: var(--clr-dark);
   border-radius: 50%;
   cursor: pointer;
   transition: .5s;
@@ -38,7 +38,8 @@ div[id*="pillbox"]:hover {
 
 p {
   font-size: 2.9rem;
-  color: white;
+  font-weight: 500;
+  color: inherit;
   width: fit-content;
   margin: 13px auto 0px;
 }
@@ -77,13 +78,14 @@ div>h3 {
 }
 
 .dark {
-  background-color: var(--clr-dark);
+  background-color: var(--clr-main) !important;
+  color: white;
 }
 
 #finished-day-pillbox {
-  /* background: none; */
-  /* background-image: url(img/check.png); */
-  /* background-size: cover; */
+  background: none;
+  background-image: url(/img/check.png);
+  background-size: cover;
 }
 
 img {
@@ -101,6 +103,9 @@ ul {
   padding: 0;
 }
 
+li{
+  cursor: pointer;
+}
 
 input {
   font-family: 'Baloo 2';
