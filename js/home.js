@@ -11,33 +11,7 @@ const finishedHabits = [];
 const allDays = [];
 
 
-for (let i = 0; i < dayForms.length; i++) {
-  dayForms[i].addEventListener('submit', (e) => {
-    e.preventDefault();
-    let tempElement = document.createElement('li');
-    tempElement.innerText = dayInputs[i].value;
-    allDays[i].habits.push(dayInputs[i].value);
-    allDays[i].habitsAdded++;
-    // Stringify Data for local storage
-    let stringifiedDay = JSON.stringify(allDays);
-    // Set to Local Storage
-    localStorage.setItem('Day', stringifiedDay);
-    habitLists[i].appendChild(tempElement);
-    dayInputs[i].value = '';
-    tempElement.addEventListener('click', () => {
-      allDays[i].habitsFinished++;
-      // Stringify Data for local storage
-      let stringifiedDay = JSON.stringify(allDays);
-      // Set to Local Storage
-      localStorage.setItem('Day', stringifiedDay);
-      let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
-      allDays[i].habits.splice(tempIndex, 1);
-      finishedHabits.push(tempElement);
-      finishedList.appendChild(tempElement);
-      habitLists[i].removeChild(tempElement);
-    });
-  });
-}
+
 
 for (let i = 0; i < pillbox.length; i++) {
   pillbox[i].addEventListener('click', () => {
@@ -85,6 +59,33 @@ let retrievedDay = localStorage.getItem('Day');
 let parsedDay = JSON.parse(retrievedDay);
 
 
+for (let i = 0; i < dayForms.length; i++) {
+  dayForms[i].addEventListener('submit', (e) => {
+    e.preventDefault();
+    let tempElement = document.createElement('li');
+    tempElement.innerText = dayInputs[i].value;
+    allDays[i].habits.push(dayInputs[i].value);
+    allDays[i].habitsAdded++;
+    // Stringify Data for local storage
+    let stringifiedDay = JSON.stringify(allDays);
+    // Set to Local Storage
+    localStorage.setItem('Day', stringifiedDay);
+    habitLists[i].appendChild(tempElement);
+    dayInputs[i].value = '';
+    tempElement.addEventListener('click', () => {
+      allDays[i].habitsFinished++;
+      // Stringify Data for local storage
+      let stringifiedDay = JSON.stringify(allDays);
+      // Set to Local Storage
+      localStorage.setItem('Day', stringifiedDay);
+      let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
+      allDays[i].habits.splice(tempIndex, 1);
+      finishedHabits.push(tempElement);
+      finishedList.appendChild(tempElement);
+      habitLists[i].removeChild(tempElement);
+    });
+  });
+}
 
 if (oldHabits) {
   for (let i = 0; i < oldHabits.length; i++) {
@@ -95,12 +96,11 @@ if (oldHabits) {
         allDays[i].list.appendChild(tempElement);
         tempElement.addEventListener('click', () => {
           allDays[i].habitsFinished++;
-          // Stringify Data for local storage
-          let stringifiedDay = JSON.stringify(allDays);
-          // Set to Local Storage
-          localStorage.setItem('Day', stringifiedDay);
+          // Stringify Data for local storage then save as 'Day'
           let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
           allDays[i].habits.splice(tempIndex, 1);
+          let stringifiedDay = JSON.stringify(allDays);
+          localStorage.setItem('Day', stringifiedDay);
           finishedHabits.push(tempElement);
           finishedList.appendChild(tempElement);
           habitLists[i].removeChild(tempElement);
