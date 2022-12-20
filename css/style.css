@@ -9,6 +9,7 @@
 
 body {
   background-color: #555;
+
 }
 
 header {
@@ -35,6 +36,9 @@ h1 {
   /* border: solid 1px white; */
 }
 
+a {
+  text-decoration: none;
+}
 
 /* Important styles */
 #toggle {
