@@ -6,35 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habit Stats</title>
+
   <link rel="stylesheet" href="css/reset.css">
-
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/stats.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
 </head>
 
 <body>
-  <h1>Charts and things</h1>
+  <h1>Stats and Rankings</h1>
   <main>
 
     <table id="tableBody"></table>
     <form id="newStats">
       <fieldset>
 
-        <label for="Stats">Stats</label>
+        <label for="Stats">Day:</label>
         <input id="Stats" type="text" for="Stats">
 
-        <label for="maxTasks">Max number of tasks completed</label>
+        <label for="maxTasks">Max number of tasks completed:</label>
         <input id="maxTasks" type="number" for="maxTasks">
 
-        <label for="minTasks">Minimum number of tasks completed</label>
+        <label for="minTasks">Minimum number of tasks completed:</label>
         <input id="minTasks" type="number" for="minTasks">
 
-        <label for="avgTasks">Average tasks completed</label>
+        <label for="avgTasks">Average tasks completed:</label>
         <input id="avgTasks" type="number" for="avgTasks">
 
         <button type="submit">Submit</button>
@@ -48,8 +49,13 @@
 
   </main>
   <footer>
-    <p><a href="index.html">Home Page</a></p>
-    <p><a href="about.html">About Us</a></p>
+    <section id="pageNav1">
+      <ul>
+      <li><a href="index.html">Home Page</a></li>
+      <li><a href="about.html">About Us</a></li>
+      </ul>
+    </section>
+    
     <script src="js/app.js"></script>
   </footer>
 </body>
