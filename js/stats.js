@@ -10,9 +10,7 @@ let canvasElem = document.getElementById('Chart');
 
 
 // ********************* THIS FUNCTION RENDERS THE CHART ***********************
-
 let parseData = JSON.parse(localStorage.getItem('Day'));
-
 // ********************* THIS FUNCTION RENDERS THE CHART ************************
 function renderChart() {
   let dayName = []
