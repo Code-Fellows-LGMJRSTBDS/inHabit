@@ -46,5 +46,6 @@ theToggle.onclick = function () {
 
 function clearAllLocalStorage() {
   localStorage.clear();
+  location.reload();
 
 }
