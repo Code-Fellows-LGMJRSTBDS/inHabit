@@ -5,9 +5,10 @@
   --clr-secondary: #00ad5f;
 }
 
+*{  font-family: 'Baloo 2';}
+
 body {
   background-color: #555;
-  font-family: 'Baloo 2';
 }
 
 header {
@@ -93,7 +94,7 @@ h1 {
 /* menu appearance*/
 #menu {
   position: relative;
-  width: 200px;
+  width: 250px;
   padding: 8px;
   margin: auto;
   text-align: center;
@@ -109,7 +110,7 @@ h1 {
 #menu:after {
   position: absolute;
   top: -15px;
-  left: 93px;
+  left: 118px;
   content: "";
   display: block;
   border-left: 15px solid transparent;
@@ -117,105 +118,42 @@ h1 {
   border-bottom: 20px solid var(--clr-dark);
 }
 
-ul,
-li,
-li a {
+nav ul,
+nav li,
+nav li a {
   list-style: none;
-  display: block;
+  display: inline-block;
   margin: 0;
   padding: 0;
 }
 
-li a {
-  padding: 5px;
+nav li a {
+  padding: 5px 15px;
   color: black;
   text-decoration: none;
   transition: all .2s;
   font-weight: 500;
+  border-radius: 15px;
 }
 
-li a:hover,
-li a:focus {
+nav li a:hover,
+nav li a:focus {
   background: var(--clr-main);
   color: rgb(0, 0, 0);
 }
 
 
-
-
-
-
-
-/* liam's stuff below */
-
-
-/* header {
-  width: 100%;
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--clr-dark);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 70px;
 }
 
-body {
-  font-family: 'Baloo 2', sans-serif;
-}
 
-.nav-flex-container {
-  display: flex;
-  flex-direction: row;
-  height: 150px;
-  padding: 20px;
-  align-items: left;
-  background-color: white;
+button:hover {
+  background-color: black;
+  color: whitesmoke;
 }
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  
-}
-
-#text-logo {
-  font-family: 'Baloo 2', sans-serif;
-  color: black;
-  font-size: large;
-  font-weight: 400;
-  padding-left: 20px;
-}
-
-.nav-items-toggle {
-  display: none;
-}
-
-.nav-items {
-  display: flex;
-  margin-left: auto;
-  flex-direction: row;
-  font-size: large;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-
-nav li {
-  padding-right: 10px;
-}
-
-#image-logo {
-  width: 100px;
-}
-
-@media (max-width: 800px) {
-  .nav-flex-container, .nav-items {
-    flex-direction: column;
-  }
-  .nav-items {
-    display: none;
-  }
-  .nav-toggle-show {
-    display: flex;
-  }
-  .nav-items-toggle {
-    align-self: flex-end;
-    display: initial;
-    position: absolute;
-    cursor: pointer;
-   } 
-} */
