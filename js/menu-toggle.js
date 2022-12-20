@@ -43,3 +43,8 @@ theToggle.onclick = function () {
   toggleClass(this, 'on');
   return false;
 };
+
+function clearAllLocalStorage() {
+  localStorage.clear();
+
+}
