@@ -84,7 +84,7 @@ div>h3 {
 
 #finished-day-pillbox {
   background: none;
-  background-image: url(/img/check.png);
+  background-image: url(../img/check.png);
   background-size: cover;
 }
 
