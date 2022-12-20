@@ -9,12 +9,13 @@
   <title>inHabit Tracker</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+
 </head>
 
 <body>
-  <header>
+  <!-- <header>
     <nav class="nav-flex-container">
       <div class="nav-brand">
         <div id="image-logo"><img src="img/check.png" alt=""></div>
@@ -30,11 +31,27 @@
         <li><button id="reset-storage" class="nav-items">reset</button></li>
       </ul>
     </nav>
+  </header> -->
+
+  <header>
+    <div id="header-logo">
+      <img src="img/check.png" alt="logo">
+      <h1>inHabit</h1>
+    </div>
+    <nav>
+      <a href="#menu" id="toggle"><span></span></a>
+      <div id="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="stats.html">Stats</a></li>
+          <li><a href="about.html">About</a></li>
+          
+        </ul>
+      </div>
+    </nav>
   </header>
 
-</head>
-
-<body>
+    
   <section class="pillbox-container">
     <div id="add-day-pillbox"><p>+</p></div>
     <div id="sunday-pillbox"><p>S</p></div>
