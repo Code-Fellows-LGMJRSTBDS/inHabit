@@ -5,10 +5,13 @@
   --clr-secondary: #00ad5f;
 }
 
-*{  font-family: 'Baloo 2';}
+* {
+  font-family: 'Baloo 2';
+}
 
 body {
   background-color: #555;
+
 }
 
 header {
@@ -24,7 +27,7 @@ header img {
 }
 
 #header-logo {
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
 }
 
@@ -35,14 +38,17 @@ h1 {
   /* border: solid 1px white; */
 }
 
+a {
+  text-decoration: none;
+}
 
 /* Important styles */
 #toggle {
   display: block;
   width: 30px;
   height: 25px;
-  margin: 30px auto 10px;
-  align-self: flex-end;
+  margin-top: 50px;
+  margin-left: 90px;
 }
 
 #toggle span:after,
@@ -66,7 +72,7 @@ h1 {
 #toggle span:after,
 #toggle span:before {
   width: 100%;
-  height: 5px;
+  height: 4px;
   background-color: var(--clr-main);
   transition: all 0.3s;
   backface-visibility: hidden;
@@ -94,8 +100,8 @@ h1 {
 /* menu appearance*/
 #menu {
   position: relative;
-  width: 250px;
-  padding: 8px;
+  width: 120px;
+  padding: 12px;
   margin: auto;
   text-align: center;
   border-radius: 20px;
@@ -105,17 +111,6 @@ h1 {
   visibility: hidden;
   transition: opacity .4s;
   font-size: 1.2em;
-}
-
-#menu:after {
-  position: absolute;
-  top: -15px;
-  left: 118px;
-  content: "";
-  display: block;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 20px solid var(--clr-dark);
 }
 
 nav ul,
@@ -128,7 +123,7 @@ nav li a {
 }
 
 nav li a {
-  padding: 5px 15px;
+  padding: 5px 5px;
   color: black;
   text-decoration: none;
   transition: all .2s;
@@ -142,18 +137,34 @@ nav li a:focus {
   color: rgb(0, 0, 0);
 }
 
-
-button {
-  border: none;
-  border-radius: 10px;
-  background-color: var(--clr-dark);
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 5px 70px;
-}
+@media screen and (max-width: 600px) {
+  #menu {
 
 
-button:hover {
-  background-color: black;
-  color: whitesmoke;
-}
+    nav ul,
+    nav li,
+    nav li a {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li a {
+      padding: 5px 15px;
+      margin-left: 0px;
+      color: black;
+      text-decoration: none;
+      transition: all .2s;
+      font-weight: 500;
+      border-radius: 15px;
+    }
+
+    nav li a:hover,
+    nav li a:focus {
+      background: var(--clr-main);
+      color: rgb(0, 0, 0);
+    }
+  }

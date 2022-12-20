@@ -43,3 +43,12 @@ theToggle.onclick = function () {
   toggleClass(this, 'on');
   return false;
 };
+
+function clearAllLocalStorage() {
+  localStorage.clear();
+  location.reload();
+
+}
+
+const navStorageLink = document.getElementById('reset-storage-link');
+navStorageLink.addEventListener('click', clearAllLocalStorage);

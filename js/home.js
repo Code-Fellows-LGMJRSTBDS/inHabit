@@ -1,39 +1,17 @@
 'use strict';
 
-
 const pillbox = document.querySelectorAll('div[id*="day-pillbox"]');
-console.log(pillbox) ;
 const cards = document.querySelectorAll('div[id*="card"]');
-console.log(cards);
 const dayInputs = document.querySelectorAll('.day-input');
-console.log(dayInputs);
 const habitLists = document.querySelectorAll('.habit-list');
-console.log(habitLists);
 const dayForms = document.querySelectorAll('.day-form');
-console.log(dayForms);
 const finishedList = document.querySelector('#finished-list');
+let oldHabits = JSON.parse(localStorage.getItem('Day'));
 const finishedHabits = [];
 const allDays = [];
 
 
-for (let i = 0; i < dayForms.length; i++) {
-  dayForms[i].addEventListener('submit', (e) => {
-    e.preventDefault();
-    let tempElement = document.createElement('li');
-    tempElement.innerText = dayInputs[i].value;
-    allDays[i].habits.push(dayInputs[i].value);
-    allDays[i].habitsAdded++;
-    habitLists[i].appendChild(tempElement);
-    tempElement.addEventListener('click', () => {
-      allDays[i].habitsFinished++;
-      let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
-      allDays[i].habits.splice(tempIndex, 1);
-      finishedHabits.push(tempElement);
-      finishedList.appendChild(tempElement);
-      habitLists[i].removeChild(tempElement);
-    });
-  });
-}
+
 
 for (let i = 0; i < pillbox.length; i++) {
   pillbox[i].addEventListener('click', () => {
@@ -41,10 +19,6 @@ for (let i = 0; i < pillbox.length; i++) {
     pillbox[i].classList.toggle('dark');
   });
 }
-
-
-
-let TOD = new Date();
 
 function Day(dayName, dayNumber) {
   this.dayName = dayName;
@@ -67,23 +41,78 @@ const wednesday = new Day('Wednesday', 3);
 const thursday = new Day('Thursday', 4);
 const friday = new Day('Friday', 5);
 const saturday = new Day('Saturday', 6);
+if (oldHabits) {
+  for (let i = 0; i < allDays.length; i++) {
+    allDays[i].habits = oldHabits[i].habits;
+    allDays[i].habitsAdded = oldHabits[i].habitsAdded;
+    allDays[i].habitsFinished = oldHabits[i].habitsFinished;
+  }
+}
 
-// Stringify Data for local storage
-let stringifiedDay = JSON.stringify(allDays);
-
-console.log('Stringified Day', stringifiedDay);
-
-// Set to Local Storage
-localStorage.setItem('Day', stringifiedDay);
 
 // Pull Data from Local Storage
 let retrievedDay = localStorage.getItem('Day');
 
-console.log('retrieved day >>>', retrievedDay);
 
 // Parse our Local Storage Data
 // let parsedDay = JSON.parse(retrievedDay);
-let parsedDay = JSON.parse(retrievedDay)
+let parsedDay = JSON.parse(retrievedDay);
 
-console.log('parsed days >>>', parsedDay);
 
+for (let i = 0; i < dayForms.length; i++) {
+  dayForms[i].addEventListener('submit', (e) => {
+    e.preventDefault();
+    let tempElement = document.createElement('li');
+    tempElement.innerText = dayInputs[i].value;
+    allDays[i].habits.push(dayInputs[i].value);
+    allDays[i].habitsAdded++;
+    // Stringify Data for local storage
+    let stringifiedDay = JSON.stringify(allDays);
+    // Set to Local Storage
+    localStorage.setItem('Day', stringifiedDay);
+    habitLists[i].appendChild(tempElement);
+    dayInputs[i].value = '';
+    tempElement.addEventListener('click', () => {
+      allDays[i].habitsFinished++;
+      let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
+      allDays[i].habits.splice(tempIndex, 1);
+      let stringifiedDay = JSON.stringify(allDays);
+      localStorage.setItem('Day', stringifiedDay);
+      finishedHabits.push(tempElement);
+      finishedList.appendChild(tempElement);
+      habitLists[i].removeChild(tempElement);
+    });
+  });
+}
+
+if (oldHabits) {
+  for (let i = 0; i < oldHabits.length; i++) {
+    if (oldHabits[i].habits) {
+      for (let j = 0; j < oldHabits[i].habits.length; j++) {
+        let tempElement = document.createElement('li');
+        tempElement.innerText = oldHabits[i].habits[j];
+        allDays[i].list.appendChild(tempElement);
+        tempElement.addEventListener('click', () => {
+          allDays[i].habitsFinished++;
+          // Stringify Data for local storage then save as 'Day'
+          let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
+          allDays[i].habits.splice(tempIndex, 1);
+          let stringifiedDay = JSON.stringify(allDays);
+          localStorage.setItem('Day', stringifiedDay);
+          finishedHabits.push(tempElement);
+          finishedList.appendChild(tempElement);
+          habitLists[i].removeChild(tempElement);
+        }
+        );
+      }
+    }
+  }
+}
+let curr = new Date; // get current date
+let first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
+let last = first + 6; // last day is the first day + 6
+
+let firstday = new Date(curr.setDate(first)).toUTCString().slice(0, 17);
+let lastday = new Date(curr.setDate(last)).toUTCString().slice(0, 17);
+
+document.getElementById('date').innerHTML = `${firstday} - ${lastday}`;
