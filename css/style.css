@@ -25,13 +25,14 @@ body {
   display: none;
 }
 
-.nav-flex-container ul {
+.nav-items {
+  display: flex;
   margin-left: auto;
   flex-direction: row;
 }
 
-.nav-flex-container li {
-  margin-bottom: 10px;
+nav li {
+  padding-right: 8px;
 }
 
 #image-logo {
@@ -39,13 +40,21 @@ body {
 }
 
 @media (max-width: 800px) {
-  .nav-flex-container {
+  .nav-flex-container, #nav-items {
     flex-direction: column;
-    background-color: white;
   }
-  .nav-items-right {
+  #nav-items {
     display: none;
   }
+  .nav-toggle-show {
+    display: flex;
+  }
+  .nav-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+   } 
 }
 
 
