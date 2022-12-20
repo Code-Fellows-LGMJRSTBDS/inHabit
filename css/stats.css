@@ -9,12 +9,11 @@ body {
   font-family: 'Baloo 2';
 }
 
-h1 {
+h2 {
   text-align: center;
   font-size: 4em;
-  padding: 50px;
-  margin-bottom: 50px;
-  color: white;
+  padding: 10px;
+  color: whitesmoke;
 }
 
 #tableBody {
@@ -23,7 +22,6 @@ h1 {
 
 label {
   border: solid 2px white;
-  -moz-border-radius: 50%;
   border-radius: 10px;
   color: black;
   padding: .3em;
@@ -36,21 +34,9 @@ p {
   margin: 13px auto 0px;
 }
 
-img {
-  width: 100%;
-  border-radius: 50%;
-}
-
 form {
   margin-top: 15px;
 }
-
-ul {
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-}
-
 
 input {
   font-family: 'Baloo 2';
@@ -62,11 +48,4 @@ input {
 
 form li:hover {
   color: var(--clr-main);
-}
-
-#pageNav1 {
-  position: fixed;
-  text-align: center;
-  bottom: 0%;
-  vertical-align: middle;
 }

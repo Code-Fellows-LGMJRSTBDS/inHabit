@@ -16,7 +16,7 @@ header {
 main {
     display: flex;
     gap: 2em;
-    margin: 6em;
+    margin: 4em;
     flex-wrap: wrap;
     justify-content: center;
 }
