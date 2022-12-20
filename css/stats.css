@@ -1,12 +1,11 @@
 :root {
   --clr-grey: #ADADAD;
-  --clr-dark: #00d22e47;
+  --clr-dark: #00ab5e;
   --clr-main: #00e078;
   --clr-secondary: #00ad5f;
 }
 
 body {
-  background-color: #00ad5f;
   font-family: 'Baloo 2';
 }
 
