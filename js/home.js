@@ -13,7 +13,7 @@ const dayForms = document.querySelectorAll('.day-form');
 console.log(dayForms);
 const finishedList = document.querySelector('#finished-list');
 const finishedHabits = [];
-
+const allDays = [];
 
 
 for (let i = 0; i < dayForms.length; i++) {
@@ -45,7 +45,7 @@ for (let i = 0; i < pillbox.length; i++) {
 
 
 let TOD = new Date();
-const allDays = [];
+
 function Day(dayName, dayNumber) {
   this.dayName = dayName;
   this.dayname = dayNumber;
@@ -68,4 +68,22 @@ const thursday = new Day('Thursday', 4);
 const friday = new Day('Friday', 5);
 const saturday = new Day('Saturday', 6);
 
+// Stringify Data for local storage
+let stringifiedDay = JSON.stringify(allDays);
+
+console.log('Stringified Day', stringifiedDay);
+
+// Set to Local Storage
+localStorage.setItem('Day', stringifiedDay);
+
+// Pull Data from Local Storage
+let retrievedDay = localStorage.getItem('Day');
+
+console.log('retrieved day >>>', retrievedDay);
+
+// Parse our Local Storage Data
+// let parsedDay = JSON.parse(retrievedDay);
+let parsedDay = JSON.parse(retrievedDay)
+
+console.log('parsed days >>>', parsedDay);
 
