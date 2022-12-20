@@ -10,11 +10,8 @@ let canvasElem = document.getElementById('Chart');
 
 
 // ********************* THIS FUNCTION RENDERS THE CHART ***********************
-let chartData =
-  "[{\"dayName\":\"Sunday\",\"dayname\":0,\"pillbox\":{},\"card\":{},\"input\":{},\"list\":{},\"form\":{\"0\":{}},\"habitsAdded\":7,\"habitsFinished\":6,\"habits\":[\"get paid\"]},{\"dayName\":\"Monday\",\"dayname\":1,\"pillbox\":{},\"card\":{},\"input\":{},\"list\":{},\"form\":{\"0\":{}},\"habitsAdded\":3,\"habitsFinished\":2,\"habits\":[\"don't lose\"]},{\"dayName\":\"Tuesday\",\"dayname\":2,\"pillbox\":{},\"card\":{},\"input\":{},\"list\":{},\"form\":{\"0\":{}},\"habitsAdded\":4,\"habitsFinished\":2,\"habits\":[\"Fat stack benjis\",\"Fat stack benjis\"]},{\"dayName\":\"Wednesday\",\"dayname\":3,\"pillbox\":{},\"card\":{},\"input\":{},\"list\":{},\"form\":{\"0\":{}},\"habitsAdded\":9,\"habitsFinished\":9,\"habits\":[]},{\"dayName\":\"Thursday\",\"dayname\":4,\"pillbox\":{},\"card\":{},\"input\":{},\"list\":{},\"form\":{\"0\":{}},\"habitsAdded\":3,\"habitsFinished\":2,\"habits\":[\"Take the day off\"]},{\"dayName\":\"Friday\",\"dayname\":5,\"pillbox\":{},\"card\":{},\"input\":{},\"list\":{},\"form\":{\"0\":{}},\"habitsAdded\":2,\"habitsFinished\":1,\"habits\":[\"party boi\"]},{\"dayName\":\"Saturday\",\"dayname\":6,\"pillbox\":{},\"card\":{},\"input\":{},\"list\":{},\"form\":{\"0\":{}},\"habitsAdded\":12,\"habitsFinished\":9,\"habits\":[\"win\",\"win\",\"win\"]}]"
 
-let parseData = JSON.parse(chartData);
-
+let parseData = JSON.parse(localStorage.getItem('Day'));
 
 
 function renderChart() {
