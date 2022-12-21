@@ -122,7 +122,7 @@ const weekend = [saturday, sunday];
 
 newHabitForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (newHabitForm.frequency.value === 'daily') {
+  if (newHabitForm.frequency.value === 'daily' && newHabitForm.habitTitle.value !== '') {
     for (let day of allDays) {
       day.habits.push(newHabitForm.habitTitle.value);
       day.habitsAdded++;
@@ -143,7 +143,7 @@ newHabitForm.addEventListener('submit', (e) => {
         day.list.removeChild(tempElement);
       });
     }
-  } else if (newHabitForm.frequency.value === 'weekdays') {
+  } else if (newHabitForm.frequency.value === 'weekdays' && newHabitForm.habitTitle.value !== '') {
     for (let day of weekdays) {
       day.habits.push(newHabitForm.habitTitle.value);
       day.habitsAdded++;
@@ -163,7 +163,7 @@ newHabitForm.addEventListener('submit', (e) => {
         day.list.removeChild(tempElement);
       });
     }
-  } else if (newHabitForm.frequency.value === 'weekends') {
+  } else if (newHabitForm.frequency.value === 'weekends' && newHabitForm.habitTitle.value !== '') {
     for (let day of weekend) {
       day.habits.push(newHabitForm.habitTitle.value);
       day.habitsAdded++;
