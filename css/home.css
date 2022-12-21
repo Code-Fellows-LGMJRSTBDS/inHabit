@@ -91,12 +91,6 @@ div>h3 {
   color: white;
 }
 
-#finished-day-pillbox {
-  background: none;
-  background-image: url(../img/check.png);
-  background-size: cover;
-}
-
 img {
   width: 100%;
   border-radius: 50%;
@@ -112,7 +106,7 @@ ul {
   padding: 0;
 }
 
-li{
+li {
   cursor: pointer;
 }
 
@@ -122,6 +116,7 @@ input {
   font-weight: 500;
   padding: 2px 10px;
   margin: 15px;
+  border-radius: 10px;
 }
 
 form li:hover {
@@ -138,12 +133,13 @@ form li:hover {
   }
 
   div[id*="day-pillbox"] {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 
   .day-container {
@@ -154,5 +150,6 @@ form li:hover {
     width: 90%;
     margin: 0 auto;
   }
+
 
 }

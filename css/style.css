@@ -9,21 +9,16 @@
   font-family: 'Baloo 2';
 }
 
-body {
-  background-color: #555;
-
-}
-
 header {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
-  /* border: solid 1px white; */
+  margin: 10px 10px 0 0;
 }
 
 header img {
   height: 100px;
   width: 100px;
+  margin-left: 10px;
 }
 
 #header-logo {
@@ -35,7 +30,6 @@ h1 {
   font-size: 4rem;
   color: whitesmoke;
   padding-left: 10px;
-  /* border: solid 1px white; */
 }
 
 a {
@@ -47,8 +41,9 @@ a {
   display: block;
   width: 30px;
   height: 25px;
-  margin-top: 50px;
-  margin-left: 90px;
+  margin-top: 40px;
+  margin-left: 96px;
+
 }
 
 #toggle span:after,
@@ -95,12 +90,13 @@ a {
 #toggle.on+#menu {
   opacity: 1;
   visibility: visible;
+
 }
 
 /* menu appearance*/
 #menu {
   position: relative;
-  width: 120px;
+  width: 200px;
   padding: 12px;
   margin: auto;
   text-align: center;
@@ -137,34 +133,57 @@ nav li a:focus {
   color: rgb(0, 0, 0);
 }
 
+footer {
+  color: var(--clr-main);
+  text-align: center;
+  padding: 20px 0 5px 0;
+}
+
+#reset-storage-link a {
+  padding: 5px 10px;
+}
+
+#reset-storage-link a:hover,
+#reset-storage-link a:active {
+  background-color: black;
+  color: whitesmoke;
+}
+
+
 @media screen and (max-width: 600px) {
-  #menu {
-
-
-    nav ul,
-    nav li,
-    nav li a {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav li a {
-      padding: 5px 15px;
-      margin-left: 0px;
-      color: black;
-      text-decoration: none;
-      transition: all .2s;
-      font-weight: 500;
-      border-radius: 15px;
-    }
-
-    nav li a:hover,
-    nav li a:focus {
-      background: var(--clr-main);
-      color: rgb(0, 0, 0);
-    }
+  body {
+    width: 100vw;
   }
+
+  #menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    /* padding: 0 5px; */
+  }
+
+  #menu li,
+  #menu :active {
+    padding: 0 5px;
+  }
+
+  header {
+    margin-bottom: 50px;
+  }
+
+  #menu {
+    width: fit-content;
+    margin: 10px;
+    position: fixed;
+    right: 0;
+  }
+
+  #toggle {
+    margin: 54px 10px 0 0;
+  }
+
+  #date {
+    font-size: 1.4rem;
+  }
+}
