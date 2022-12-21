@@ -31,6 +31,7 @@ function renderChart() {
   console.log(dayName);
 
   let chartObj = {
+    scaleFontColor: "white",
     type: 'line',
     data: {
       labels: dayName,
@@ -50,14 +51,17 @@ function renderChart() {
       ]
     },
     options: {
+      responsive: true,
       indexAxis: 'x',
       scales: {
         y: {
-          beginAtZero: true
+          ticks: { color: 'gold', beginAtZero: true },
+        },
+        x: {
+          ticks: { color: 'white', beginAtZero: true }
         }
       }
     }
-
   }
   new Chart(canvasElem, chartObj)
 };
