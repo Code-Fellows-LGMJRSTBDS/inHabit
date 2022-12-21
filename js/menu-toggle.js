@@ -49,3 +49,6 @@ function clearAllLocalStorage() {
   location.reload();
 
 }
+
+const navStorageLink = document.getElementById('reset-storage-link');
+navStorageLink.addEventListener('click', clearAllLocalStorage);
