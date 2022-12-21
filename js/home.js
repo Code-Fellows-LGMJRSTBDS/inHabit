@@ -91,8 +91,6 @@ let parsedDay = JSON.parse(retrievedDay);
 console.log('parsed days >>>', parsedDay);
 
 
-
-
 let oldHabits = JSON.parse(localStorage.getItem('Day'));
 if (oldHabits) {
   for (let i = 0; i < oldHabits.length; i++) {
@@ -105,3 +103,20 @@ if (oldHabits) {
     }
   }
 }
+
+
+function deleteItems() {
+  // Clear localStorage items 
+  localStorage.clear();
+};
+
+
+let curr = new Date; // get current date
+let first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
+let last = first + 6; // last day is the first day + 6
+
+let firstday = new Date(curr.setDate(first)).toUTCString().slice(0, 17);
+let lastday = new Date(curr.setDate(last)).toUTCString().slice(0, 17);
+
+document.getElementById('date').innerHTML = firstday;
+document.getElementById('dates').innerHTML = lastday;
