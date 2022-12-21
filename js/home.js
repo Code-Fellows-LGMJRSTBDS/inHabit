@@ -28,6 +28,7 @@ for (let i = 0; i < dayForms.length; i++) {
     // Set to Local Storage
     localStorage.setItem('Day', stringifiedDay);
     habitLists[i].appendChild(tempElement);
+    dayInputs[i].value = '';
     tempElement.addEventListener('click', () => {
       allDays[i].habitsFinished++;
       // Stringify Data for local storage
