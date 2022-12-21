@@ -27,16 +27,18 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="stats.html">Stats</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><button id="reset-storage" class="nav-items">Reset</button></li>
+          <li><a href="about.html">About</a></li>
+          <li><button id="reset-storage" class="nav-items" onclick="clearAllLocalStorage()">Reset All</button></li>
         </ul>
       </div>
     </nav>
   </header>
 
-    
   <section class="pillbox-container">
     <div id="add-day-pillbox"><p>+</p></div>
+    <div id="finished-day-pillbox"><p></p></div>
+  </section>
+  <section class="pillbox-container">
     <div id="sunday-pillbox"><p>S</p></div>
     <div id="monday-pillbox" class="dark"><p>M</p></div>
     <div id="tueday-pillbox"><p>T</p></div>
@@ -44,7 +46,6 @@
     <div id="thurday-pillbox"><p>T</p></div>
     <div id="friday-pillbox"><p>F</p></div>
     <div id="saturday-pillbox"><p>S</p></div>
-    <div id="finished-day-pillbox"><p></p></div>
   </section>
   <section class="day-container">
     <div id="settings-card" class="hide">

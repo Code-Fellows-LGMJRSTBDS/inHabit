@@ -49,6 +49,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 1em;
+  padding-bottom: 1.5em;
 }
 
 .day-container {
@@ -129,6 +130,7 @@ form li:hover {
 @media (max-width: 850px) {
   .pillbox-container {
     flex-wrap: wrap;
+    padding-bottom: 1.5em;
   }
 
   div[id*="day-pillbox"] {
