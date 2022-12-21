@@ -9,11 +9,6 @@
   font-family: 'Baloo 2';
 }
 
-body {
-  background-color: #555;
-
-}
-
 header {
   display: flex;
   justify-content: space-between;

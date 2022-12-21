@@ -9,6 +9,10 @@
     font-family: 'Baloo 2';
 }
 
+body {
+    background-color: rgb(30, 30, 30);
+    }
+
 header {
     font-family: 'Baloo 2';
 }
@@ -26,7 +30,7 @@ main {
     height: fit-content;
     padding: 1em;
     border-radius: 20px;
-    box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 25px 0px rgba(75, 75, 75, 0.75);
     background-color: var(--clr-dark);
     color: white;
 }
@@ -39,6 +43,10 @@ main {
 .card h1 {
     font-size: 1.7rem;
     font-weight: 500;
+}
+
+footer {
+    font-family: 'Baloo 2';
 }
 
 
