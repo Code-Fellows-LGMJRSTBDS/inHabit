@@ -1,13 +1,15 @@
 :root {
   --clr-grey: #ADADAD;
   --clr-dark: #00ab5e;
-  --clr-main: #00e078;
+  --clr-main: rgb(0, 224, 120);
   --clr-secondary: #00ad5f;
 }
 
 body {
   font-family: 'Baloo 2';
-}
+  background-color: rgb(30, 30, 30);
+  margin: 0 auto;
+  }
 
 h2 {
   text-align: center;
@@ -23,7 +25,7 @@ h2 {
 label {
   border: solid 2px white;
   border-radius: 10px;
-  color: black;
+  color: white;
   padding: .3em;
 }
 
@@ -48,4 +50,15 @@ input {
 
 form li:hover {
   color: var(--clr-main);
+}
+
+#stats-container {
+  margin: 0 auto;
+}
+
+#Chart {
+  margin: 2rem;
+  border: solid 2px var(--clr-main);
+  border-radius: 35px;
+  padding: 5rem;
 }
