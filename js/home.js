@@ -6,6 +6,7 @@ const dayInputs = document.querySelectorAll('.day-input');
 const habitLists = document.querySelectorAll('.habit-list');
 const dayForms = document.querySelectorAll('.day-form');
 const finishedList = document.querySelector('#finished-list');
+const newHabitForm = document.querySelector('#new-habit-form');
 let oldHabits = JSON.parse(localStorage.getItem('Day'));
 const finishedHabits = [];
 const allDays = [];
@@ -94,7 +95,6 @@ if (oldHabits) {
         allDays[i].list.appendChild(tempElement);
         tempElement.addEventListener('click', () => {
           allDays[i].habitsFinished++;
-          // Stringify Data for local storage then save as 'Day'
           let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
           allDays[i].habits.splice(tempIndex, 1);
           let stringifiedDay = JSON.stringify(allDays);
@@ -116,3 +116,73 @@ let firstday = new Date(curr.setDate(first)).toUTCString().slice(0, 17);
 let lastday = new Date(curr.setDate(last)).toUTCString().slice(0, 17);
 
 document.getElementById('date').innerHTML = `${firstday} - ${lastday}`;
+
+const weekdays = [monday, tuesday, wednesday, thursday,friday];
+const weekend = [saturday, sunday];
+
+newHabitForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (newHabitForm.frequency.value === 'daily') {
+    for (let day of allDays) {
+      day.habits.push(newHabitForm.habitTitle.value);
+      day.habitsAdded++;
+      let tempElement = document.createElement('li');
+      tempElement.innerText = newHabitForm.habitTitle.value;
+      day.list.appendChild(tempElement);
+      let stringifiedDay = JSON.stringify(allDays);
+      localStorage.setItem('Day', stringifiedDay);
+      // newHabitForm.habitTitle.value = '';
+      tempElement.addEventListener('click', () => {
+        day.habitsFinished++;
+        let tempIndex = day.habits.indexOf(tempElement.innerText);
+        day.habits.splice(tempIndex, 1);
+        let stringifiedDay = JSON.stringify(allDays);
+        localStorage.setItem('Day', stringifiedDay);
+        finishedHabits.push(tempElement);
+        finishedList.appendChild(tempElement);
+        day.list.removeChild(tempElement);
+      });
+    }
+  } else if (newHabitForm.frequency.value === 'weekdays') {
+    for (let day of weekdays) {
+      day.habits.push(newHabitForm.habitTitle.value);
+      day.habitsAdded++;
+      let tempElement = document.createElement('li');
+      tempElement.innerText = newHabitForm.habitTitle.value;
+      day.list.appendChild(tempElement);
+      let stringifiedDay = JSON.stringify(allDays);
+      localStorage.setItem('Day', stringifiedDay);
+      tempElement.addEventListener('click', () => {
+        day.habitsFinished++;
+        let tempIndex = day.habits.indexOf(tempElement.innerText);
+        day.habits.splice(tempIndex, 1);
+        let stringifiedDay = JSON.stringify(allDays);
+        localStorage.setItem('Day', stringifiedDay);
+        finishedHabits.push(tempElement);
+        finishedList.appendChild(tempElement);
+        day.list.removeChild(tempElement);
+      });
+    }
+  } else if (newHabitForm.frequency.value === 'weekends') {
+    for (let day of weekend) {
+      day.habits.push(newHabitForm.habitTitle.value);
+      day.habitsAdded++;
+      let tempElement = document.createElement('li');
+      tempElement.innerText = newHabitForm.habitTitle.value;
+      day.list.appendChild(tempElement);
+      let stringifiedDay = JSON.stringify(allDays);
+      localStorage.setItem('Day', stringifiedDay);
+      tempElement.addEventListener('click', () => {
+        day.habitsFinished++;
+        let tempIndex = day.habits.indexOf(tempElement.innerText);
+        day.habits.splice(tempIndex, 1);
+        let stringifiedDay = JSON.stringify(allDays);
+        localStorage.setItem('Day', stringifiedDay);
+        finishedHabits.push(tempElement);
+        finishedList.appendChild(tempElement);
+        day.list.removeChild(tempElement);
+      });
+    }
+  }
+});
+
