@@ -12,7 +12,9 @@ body {
 
 #date {
   color: white;
+  margin: 0 auto;
   margin-bottom: 5px;
+  transform: translateY();
 }
 
 #add-item-pillbox {

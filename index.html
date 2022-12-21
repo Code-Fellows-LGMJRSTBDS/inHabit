@@ -19,7 +19,9 @@
   <header>
     <div id="header-logo">
       <img src="img/check.png" alt="logo">
-      <a href="index.html"><h1>inHabit</h1></a>
+      <a href="index.html">
+        <h1>inHabit</h1>
+      </a>
     </div>
     <nav>
       <a href="#menu" id="toggle"><span></span></a>
@@ -33,32 +35,43 @@
       </div>
   </header>
   <p id="date">Date:</p>
-  
 
   <section class="pillbox-container">
     <div id="add-day-pillbox"><p>+</p></div>
     <div id="sunday-pillbox"><p>S</p></div>
-    <div id="monday-pillbox" class="dark"><p>M</p></div>
-    <div id="tueday-pillbox"><p>T</p></div>
+    <div id="monday-pillbox"><p>M</p></div>
+    <div id="tuesday-pillbox"><p>T</p></div>
     <div id="wednesday-pillbox"><p>W</p></div>
     <div id="thurday-pillbox"><p>T</p></div>
-    <div id="friday-pillbox"><p>F</p></div>
+    <div id="friday-pillbox" class="dark"><p>F</p></div>
     <div id="saturday-pillbox"><p>S</p></div>
     <div id="finished-day-pillbox"><p>✔</p></div>
   </section>
   <section class="day-container">
     <div id="settings-card" class="hide">
-      <h3>new Habit form</h3>
+      <h3>new Habit</h3>
+      <form id="new-habit-form">
+        <ul>
+          <li><input type="text" placeholder="new Habit" name="habitTitle"></li>
+          <label for="frequency">Frequency</label>
+          <li><select name="frequency" id="frequency">
+              <option value="daily">Daily</option>
+              <option value="weekdays">Weekdays</option>
+              <option value="weekends">Weekends</option>
+            </select></li>
+            <button type="submit">build Habits</button>
+        </ul>
+      </form>
     </div>
     <div id="sunday-card" class="hide">
       <h3>Sunday</h3>
       <form class="day-form">
-      <ul class="habit-list">
-        <li><input type="text" name="sunday-input" class="day-input" placeholder="Enter new Habit"></li>
-      </ul>
+        <ul class="habit-list">
+          <li><input type="text" name="sunday-input" class="day-input" placeholder="Enter new Habit"></li>
+        </ul>
       </form>
     </div>
-    <div id="monday-card" class="">
+    <div id="monday-card" class="hide">
       <h3>Monday</h3>
       <form class="day-form">
         <ul class="habit-list">
@@ -72,7 +85,7 @@
         <ul class="habit-list">
           <li><input type="text" name="tuseday-input" class="day-input" placeholder="Enter new Habit"></li>
         </ul>
-    </form>
+      </form>
     </div>
     <div id="wednesday-card" class="hide">
       <h3>Wednesday</h3>
@@ -80,7 +93,7 @@
         <ul class="habit-list">
           <li><input type="text" name="wednesday-input" class="day-input" placeholder="Enter new Habit"></li>
         </ul>
-    </form>
+      </form>
     </div>
     <div id="thursday-card" class="hide">
       <h3>Thursday</h3>
@@ -88,15 +101,15 @@
         <ul class="habit-list">
           <li><input type="text" name="thursday-input" class="day-input" placeholder="Enter new Habit"></li>
         </ul>
-    </form>
+      </form>
     </div>
-    <div id="friday-card" class="hide">
+    <div id="friday-card" class="">
       <h3>Friday</h3>
       <form class="day-form">
         <ul class="habit-list">
           <li><input type="text" name="friday-input" class="day-input" placeholder="Enter new Habit"></li>
         </ul>
-    </form>
+      </form>
     </div>
     <div id="saturday-card" class="hide">
       <h3>Saturday</h3>
@@ -104,14 +117,15 @@
         <ul class="habit-list">
           <li><input type="text" name="saturday-input" class="day-input" placeholder="Enter new Habit"></li>
         </ul>
-    </form>
+      </form>
     </div>
     <div id="finished-card" class="hide">
       <h3>Finished</h3>
       <ul id="finished-list"></ul>
     </div>
   </section>
-  <footer>&#169; inHabit Tracker Team 2022</footer>
+
+<footer>&#169; inHabit Tracker Team 2022</footer>
 <script src="js/home.js"></script>
 <script src="js/menu-toggle.js"></script>
 
