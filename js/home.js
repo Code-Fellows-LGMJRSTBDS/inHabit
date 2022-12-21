@@ -74,12 +74,10 @@ for (let i = 0; i < dayForms.length; i++) {
     dayInputs[i].value = '';
     tempElement.addEventListener('click', () => {
       allDays[i].habitsFinished++;
-      // Stringify Data for local storage
-      let stringifiedDay = JSON.stringify(allDays);
-      // Set to Local Storage
-      localStorage.setItem('Day', stringifiedDay);
       let tempIndex = allDays[i].habits.indexOf(tempElement.innerText);
       allDays[i].habits.splice(tempIndex, 1);
+      let stringifiedDay = JSON.stringify(allDays);
+      localStorage.setItem('Day', stringifiedDay);
       finishedHabits.push(tempElement);
       finishedList.appendChild(tempElement);
       habitLists[i].removeChild(tempElement);
