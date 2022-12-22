@@ -48,21 +48,23 @@
     <div id="finished-day-pillbox"><p>✔</p></div>
   </section>
   <section class="day-container">
-    <div id="settings-card" class="hide">
+    <div id="settings-card" class="">
       <h3>new Habit</h3>
-      <form id="new-habit-form">
-        <ul>
-          <li><input type="text" placeholder="new Habit" name="habitTitle"></li>
-          <label for="frequency">Frequency</label>
-          <li><select name="frequency" id="frequency">
-              <option value="daily">Daily</option>
-              <option value="weekdays">Weekdays</option>
-              <option value="weekends">Weekends</option>
-            </select></li>
-            <button type="submit">build Habits</button>
-        </ul>
+      <form id="new-habit-form" class="form">
+        <input class="form-input" type="text" placeholder="new Habit" name="habitTitle">
+            <div class="custom-select">
+              <select name="frequency" id="frequency" class="frequency-select">
+                <option value="daily">Daily</option>
+                <option value="weekdays">Weekdays</option>
+                <option value="weekends">Weekends</option>
+              </select>
+              <span class="custom-arrow"></span>
+            </div>      
+        <button class="submit-button" type="submit">Build Habit</button>
       </form>
     </div>
+
+
     <div id="sunday-card" class="hide">
       <h3>Sunday</h3>
       <form class="day-form">

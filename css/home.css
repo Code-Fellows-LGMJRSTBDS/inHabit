@@ -124,8 +124,6 @@ form li:hover {
 }
 
 
-
-
 @media (max-width: 850px) {
   .pillbox-container {
     flex-wrap: wrap;
@@ -149,6 +147,7 @@ form li:hover {
   div[id*="card"] {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 4vw;
   }
 
 
