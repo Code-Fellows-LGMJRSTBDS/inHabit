@@ -51,14 +51,8 @@ form li:hover {
   color: var(--clr-main);
 }
 
-#stats-container {
-  margin: 0 auto;
-}
 
 #Chart {
-  margin: 1rem auto;
-  border: solid 2px var(--clr-main);
-  border-radius: 35px;
-  padding: 5rem;
-  max-width: 80%;
+  /* margin: 1rem auto; */
+
 }

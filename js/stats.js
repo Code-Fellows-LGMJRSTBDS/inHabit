@@ -60,8 +60,8 @@ function renderChart() {
       }
     }
   }
-  new Chart(canvasElem, chartObj)
-};
+  new Chart(canvasElem, chartObj);
+}
 
 // ********************* EVENT HANDLERS **********************
 
