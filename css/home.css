@@ -14,7 +14,7 @@ body {
   color: white;
   margin: 0 auto;
   margin-bottom: 5px;
-  transform: translateY();
+  transform: translateY(-50px);
 }
 
 #add-item-pillbox {
@@ -57,13 +57,15 @@ p {
   justify-content: center;
   gap: 1em;
   padding-bottom: 1.5em;
+  transform: translateY(-50px);
 }
 
 .day-container {
-
   display: flex;
   justify-content: space-around;
   margin-top: 25px;
+  margin-bottom: 0;
+  transform: translateY(-50px);
 }
 
 div[id*="card"] {
@@ -127,9 +129,13 @@ form li:hover {
 
 
 @media (max-width: 850px) {
+  #date {
+    transform: translateY(0px);
+  }
   .pillbox-container {
     flex-wrap: wrap;
     padding-bottom: 1.5em;
+    transform: translateY(0);
   }
 
   div[id*="day-pillbox"] {
@@ -144,6 +150,7 @@ form li:hover {
 
   .day-container {
     flex-direction: column;
+    transform: translateY(0);
   }
 
   div[id*="card"] {
