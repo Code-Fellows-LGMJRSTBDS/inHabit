@@ -192,17 +192,18 @@ footer {
 
 .form {
   display: grid;
-  min-height: 40vw;
+  min-height: 80%;
+  max-width: 100%;
   place-items: center;
 }
 
 .form-input {
   font-size: .75em;
-  padding: 1em 5em 1em 1.5em;
+  padding: 1em;
   color: var(--clr-dark);
   border: 0;
   border-radius: 1em;
-  width: fit-content;
+
 }
 
 .form-input:hover {
@@ -215,7 +216,6 @@ select {
   color: var(--clr-dark);
   border: 0;
   border-radius: 1em;
-  width: fit-content;
 }
 
 .custom-select {
@@ -227,7 +227,7 @@ select {
   display: block;
   background: var(--clr-dark);
   height: 100%;
-  width: 4rem;
+  width: 10%;
   position: absolute;
   top: 0;
   right: -5px;
@@ -295,8 +295,9 @@ button:hover {
     display: grid;
     min-height: 90vw;
     place-items: center;
+    margin: 0 auto;
   }
-  
+
   .form-input {
     font-size: .75em;
     padding: 1em 5em 1em 1.5em;
@@ -304,12 +305,13 @@ button:hover {
     border: 0;
     border-radius: 1em;
     width: fit-content;
+    margin: 0 auto;
   }
 
   .form-input:hover {
     box-shadow: 1px 5px 20px 5px rgba(107, 107, 107, 0.44);
   }
-  
+
   select {
     font-size: .75em;
     padding: 1em 5em 1em 1.5em;
@@ -320,81 +322,81 @@ button:hover {
   }
 
   select:hover {
-      box-shadow: 1px 5px 20px 5px rgba(107, 107, 107, 0.44);
-    }
-  }
-  
-  .custom-select {
-    position: absolute;
-  
-  }
-  
-  .custom-arrow {
-    display: block;
-    background: var(--clr-dark);
-    height: 100%;
-    width: 4rem;
-    position: absolute;
-    top: 0;
-    right: -5px;
-    pointer-events: none;
-    border-radius: 1em;
-  }
-  
-  .custom-arrow::before,
-  .custom-arrow::after {
-    --size: .3em;
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .custom-arrow::before {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-bottom: var(--size) solid white;
-    top: 40%;
-  }
-  
-  .custom-arrow::after {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid white;
-    top: 60%;
-  }
-  
-  button {
-    padding: 1em 3em 1em 3em;
-    border-radius: 1em;
-    font-size: .75em;
-    border: 0;
-    margin-top: 0;
-    text-align: center;
-    background-color: #00ab5e;
-    color: black;
-    font-weight: bold;
-  }
-
-  button:hover {
-    cursor: pointer;
     box-shadow: 1px 5px 20px 5px rgba(107, 107, 107, 0.44);
-    background-color: #00e078;
   }
-  
-  .day-input {
-    font-size: .75em;
-    padding: 1em 5em 1em 1.5em;
-    color: var(--clr-dark);
-    border: 0;
-    border-radius: 1em;
-    width: fit-content;
-  }
-  
-  .card {
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-  }
+}
+
+.custom-select {
+  position: absolute;
+
+}
+
+.custom-arrow {
+  display: block;
+  background: var(--clr-dark);
+  height: 100%;
+  width: 4rem;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  pointer-events: none;
+  border-radius: 1em;
+}
+
+.custom-arrow::before,
+.custom-arrow::after {
+  --size: .3em;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid white;
+  top: 40%;
+}
+
+.custom-arrow::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid white;
+  top: 60%;
+}
+
+button {
+  padding: 1em 3em 1em 3em;
+  border-radius: 1em;
+  font-size: .75em;
+  border: 0;
+  margin-top: 0;
+  text-align: center;
+  background-color: #00ab5e;
+  color: black;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 1px 5px 20px 5px rgba(107, 107, 107, 0.44);
+  background-color: #00e078;
+}
+
+.day-input {
+  font-size: .75em;
+  padding: 1em 5em 1em 1.5em;
+  color: var(--clr-dark);
+  border: 0;
+  border-radius: 1em;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 }
