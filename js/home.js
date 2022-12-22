@@ -1,6 +1,5 @@
 'use strict';
 
-
 const pillbox = document.querySelectorAll('div[id*="day-pillbox"]');
 console.log(pillbox) ;
 const cards = document.querySelectorAll('div[id*="card"]');
@@ -29,6 +28,7 @@ for (let i = 0; i < dayForms.length; i++) {
     // Set to Local Storage
     localStorage.setItem('Day', stringifiedDay);
     habitLists[i].appendChild(tempElement);
+    dayInputs[i].value = '';
     tempElement.addEventListener('click', () => {
       allDays[i].habitsFinished++;
       // Stringify Data for local storage
@@ -51,7 +51,6 @@ for (let i = 0; i < pillbox.length; i++) {
     pillbox[i].classList.toggle('dark');
   });
 }
-
 
 
 let TOD = new Date();
@@ -87,15 +86,29 @@ console.log('retrieved day >>>', retrievedDay);
 
 // Parse our Local Storage Data
 // let parsedDay = JSON.parse(retrievedDay);
-let parsedDay = JSON.parse(retrievedDay)
+let parsedDay = JSON.parse(retrievedDay);
 
 console.log('parsed days >>>', parsedDay);
+
+
+let oldHabits = JSON.parse(localStorage.getItem('Day'));
+if (oldHabits) {
+  for (let i = 0; i < oldHabits.length; i++) {
+    if (oldHabits[i].habits) {
+      for (let j = 0; j < oldHabits[i].habits.length; j++) {
+        let tempElement = document.createElement('li');
+        tempElement.innerText = oldHabits[i].habits[j];
+        allDays[i].list.appendChild(tempElement);
+      }
+    }
+  }
+}
+
 
 function deleteItems() {
   // Clear localStorage items 
   localStorage.clear();
-}
-
+};
 
 
 let curr = new Date; // get current date
@@ -107,4 +120,3 @@ let lastday = new Date(curr.setDate(last)).toString().slice(0, 16);
 
 document.getElementById('date').innerHTML = firstday;
 document.getElementById('dates').innerHTML = lastday;
-

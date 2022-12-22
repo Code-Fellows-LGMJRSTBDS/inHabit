@@ -8,15 +8,23 @@ inHabit is an easy to use daily habit tracker/checklist app that allows you to w
 
 ## Authors: Tyler Bennett, Melanie Johnston, Liam Grist, Rafael Aldana, David Sitthideth
 
-### Links and Resources:
+### Links:
 
 - Link for Github: https://github.com/inHabit-tracker/inHabit.
 
 - Link to figma files: https://www.figma.com/files/project/76496499/Team-project?fuid=1175891756550856246.
 
-- Checkmark Logo: https://www.flaticon.com/free-icons/correct.
+
 
 - Developing a habit research: https://jamesclear.com/new-habit#:~:text=On%20average%2C%20it%20takes%20more,to%20form%20a%20new%20habit.
+
+### Resources:
+
+- Checkmarks: <a href="https://www.flaticon.com/free-icons/correct" title="correct icons">Correct icons created by Freepik - Flaticon</a>
+
+- Toggle Menu: https://codepen.io/GeoffreyCrofte/pen/nybYBm
+
+
 
 ### Reflections and Comments:
 

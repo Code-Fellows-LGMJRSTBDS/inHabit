@@ -9,31 +9,33 @@
   <title>inHabit Tracker</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+
 </head>
 
 <body>
+
   <header>
-    <nav class="nav-flex-container">
-      <div id="image-logo"><img src="/img/check.png" alt=""></div>
-      <div id="text-logo">
-        <h1>inHabit</h1>
+    <div id="header-logo">
+      <img src="img/check.png" alt="logo">
+      <a href="index.html"><h1>inHabit</h1></a>
+    </div>
+    <nav>
+      <a href="#menu" id="toggle"><span></span></a>
+      <div id="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="stats.html">Stats</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><button id="reset-storage" class="nav-items" onclick="clearAllLocalStorage()">Reset All</button></li>
+        </ul>
       </div>
-      <ul>
-        <li> <a href="index.html">My Habits</a> </li>
-        <li> <a href="stats.html">My Stats</a> </li>
-        <li> <a href="about.html">About inHabit</a> </li>
-        <li><button onclick="deleteItems()">Reset</button></li>
-      </ul>
-    </nav>
-  </header>
 
-</head>
-
-<body>
   <p id="date">Date:</p>
   <p id="dates">- </p>
+  
+
   <section class="pillbox-container">
     <div id="add-day-pillbox"><p>+</p></div>
     <div id="sunday-pillbox"><p>S</p></div>
@@ -111,6 +113,7 @@
     </div>
   </section>
 <script src="js/home.js"></script>
+<script src="js/menu-toggle.js"></script>
 
 </body>
 
