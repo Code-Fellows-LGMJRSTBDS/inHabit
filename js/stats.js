@@ -36,14 +36,16 @@ function renderChart() {
       datasets: [{
         label: '# of tasks to do',
         data: habitsAdded,
-        borderWidth: 1,
-        backgroundcolor: 'red',
+        borderWidth: 2,
+        backgroundColor: 'white',
+        borderColor: 'white',
       },
       {
         label: '# of tasks completed',
         data: habitsFinished,
-        borderWidth: 1,
-        backgroundcolor: 'blue',
+        borderWidth: 2,
+        backgroundColor: 'rgb(0, 224, 120)',
+        borderColor: 'rgb(0, 224, 120)',
       },
       ]
     },
@@ -52,7 +54,7 @@ function renderChart() {
       indexAxis: 'x',
       scales: {
         y: {
-          ticks: { color: 'gold', beginAtZero: true },
+          ticks: { color: 'rgb(0, 224, 120)', beginAtZero: true },
         },
         x: {
           ticks: { color: 'white', beginAtZero: true }
