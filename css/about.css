@@ -11,7 +11,7 @@
 
 body {
     background-color: rgb(30, 30, 30);
-    }
+}
 
 header {
     font-family: 'Baloo 2';
@@ -48,6 +48,28 @@ main {
 footer {
     font-family: 'Baloo 2';
 }
+
+
+@media (max-width: 850px) {
+
+    main {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .card {
+        width: 100%;
+        box-shadow: 0px 0px 25px -1px rgba(153,153,153,0.75);
+    }
+}
+
+
+
+
+
+
+
+
 
 
 /* **** CONFETTIS ANIMATION **** */
