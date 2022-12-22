@@ -1,6 +1,6 @@
-# inHabit-team inHabit team project repo Code201d93
+# inHabit-team
 
-inHabit is a daily habit tracker/checklist app
+inHabit is a daily habit tracker/checklist app. 
 Being a modern day human with many esposibilities is hard and it's even harder to keep mental track of everything that needs to be done day in and day out both professionally and at a personal level. That is why we created inHatbit! 
 inHabit is an easy to use daily habit tracker/checklist app that allows you to write down what needs to be done and allows you to organize your to-do list by category. Research shows that it takes humans anywhere from 18 days to 254 days to develop a habit, so why not give yourself the edge over everyone else and start tracking what needs to be done and become the person you're destined to be. Use inHabit today!
 
@@ -12,26 +12,17 @@ inHabit is an easy to use daily habit tracker/checklist app that allows you to w
 
 - Link for Github: https://github.com/inHabit-tracker/inHabit.
 
-- Link to figma files: https://www.figma.com/files/project/76496499/Team-project?fuid=1175891756550856246.
-
-
+- Link to Figma wireframe and domain model: https://www.figma.com/files/project/76496499/Team-project?fuid=1175891756550856246.
 
 - Developing a habit research: https://jamesclear.com/new-habit#:~:text=On%20average%2C%20it%20takes%20more,to%20form%20a%20new%20habit.
 
-### Resources:
+### Attributions:
 
 - Checkmarks: <a href="https://www.flaticon.com/free-icons/correct" title="correct icons">Correct icons created by Freepik - Flaticon</a>
 
 - Toggle Menu: https://codepen.io/GeoffreyCrofte/pen/nybYBm
 
-
-
-### Reflections and Comments:
-
-- Consider including the answers to your daily journal and submission questions here.
-
-- This is also a good place to reflect on the tools and resources used and learned
-
+- CSS Box Shadow Generator: https://cssgenerator.org/box-shadow-css-generator.html
 
 ### User stories:
 
