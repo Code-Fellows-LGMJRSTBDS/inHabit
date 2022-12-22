@@ -11,10 +11,16 @@ body {
   margin: 0 auto;
   }
 
+main {
+  max-width: 70%;
+  margin: 2rem auto;
+}
+
 h2 {
   text-align: center;
   font-size: 3em;
   color: whitesmoke;
+  padding-bottom: 1rem;
 }
 
 #tableBody {
@@ -36,7 +42,7 @@ p {
 }
 
 form {
-  margin-top: 15px;
+  margin-top: 35px;
 }
 
 input {
