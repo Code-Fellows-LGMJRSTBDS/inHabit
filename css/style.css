@@ -279,7 +279,7 @@ button:hover {
 
 }
 
-.day-input {
+/* .day-input {
   font-size: .75em;
   padding: 1em 5em 1em 1.5em;
   color: var(--clr-dark);
@@ -287,10 +287,10 @@ button:hover {
   border-radius: 1em;
   box-shadow: 1px 5px 20px 5px rgba(107, 107, 107, 0.44);
 
-}
+} */
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .form {
     display: grid;
     min-height: 90vw;
@@ -300,7 +300,7 @@ button:hover {
 
   .form-input {
     font-size: .75em;
-    padding: 1em 5em 1em 1.5em;
+    /* padding: 1em 5em 1em 1.5em; */
     color: var(--clr-dark);
     border: 0;
     border-radius: 1em;
@@ -388,12 +388,12 @@ button:hover {
 
 .day-input {
   font-size: .75em;
-  padding: 1em 5em 1em 1.5em;
-  color: var(--clr-dark);
+  padding: .5em .75em;
   border: 0;
-  border-radius: 1em;
+  border-radius: .6em;
   width: fit-content;
   margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 .card {
